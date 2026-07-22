@@ -11,20 +11,20 @@ export type TaskPageVoice = {
 
 export const taskPageVoices = {
   article: {
-    eyebrow: 'Reading desk',
-    headline: 'Long-form articles with a calmer editorial rhythm.',
-    description: 'Use this page for essays, guides, explainers, and story-led posts. The layout should feel like a publication, not a directory.',
+    eyebrow: 'Field notes',
+    headline: 'Clear ideas for people building real things.',
+    description: 'Explore practical stories, useful context and fresh perspectives from across the business community.',
     filterLabel: 'Choose article topic',
-    secondaryNote: 'Reading surfaces need space, hierarchy, and fewer distractions.',
-    chips: ['Editorial pacing', 'Topic filters', 'Long-read friendly'],
+    secondaryNote: 'Take your time with the stories that matter.',
+    chips: ['Perspectives', 'Practical guides', 'Fresh thinking'],
   },
   classified: {
     eyebrow: 'Notice board',
-    headline: 'Fast-moving classifieds, offers, and time-sensitive posts.',
-    description: 'Classified content should feel quick to scan, practical, and action-oriented with less editorial decoration.',
+    headline: 'Good opportunities move quickly. Start here.',
+    description: 'Browse current offers, requests and practical opportunities posted for business owners and independent professionals.',
     filterLabel: 'Filter classified category',
-    secondaryNote: 'Prioritize urgency, short summaries, and direct browsing.',
-    chips: ['Fast scan', 'Offers', 'Action cues'],
+    secondaryNote: 'Clear details for quicker decisions.',
+    chips: ['New offers', 'Requests', 'Open opportunities'],
   },
   sbm: {
     eyebrow: 'Saved resources',
@@ -36,11 +36,11 @@ export const taskPageVoices = {
   },
   profile: {
     eyebrow: 'People and profiles',
-    headline: 'Profiles with identity, trust, and reputation cues.',
-    description: 'Profile pages should make people, brands, and entities feel discoverable rather than buried in a generic feed.',
+    headline: 'Meet the people behind the work.',
+    description: 'Discover business owners, independent specialists and organisations with something useful to share.',
     filterLabel: 'Filter profile category',
-    secondaryNote: 'Make identity and credibility visible before the grid begins.',
-    chips: ['Identity first', 'Trust cues', 'Creator/business cards'],
+    secondaryNote: 'A direct route to capable people.',
+    chips: ['Owners', 'Specialists', 'Organisations'],
   },
   pdf: {
     eyebrow: 'Document library',
@@ -52,8 +52,8 @@ export const taskPageVoices = {
   },
   listing: {
     eyebrow: 'Business directory',
-    headline: 'Business listings built for discovery and comparison.',
-    description: 'Listing pages should behave like a directory with trust cues, metadata, and a practical search rhythm.',
+    headline: 'Find the right business for the next move.',
+    description: 'Browse useful companies, compare the details and connect directly when the fit feels right.',
     filterLabel: 'Filter business category',
     secondaryNote: 'Prioritize comparison, location, and direct action paths.',
     chips: ['Directory', 'Compare', 'Business discovery'],

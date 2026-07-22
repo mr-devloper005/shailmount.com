@@ -3,11 +3,11 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const pagesContent = {
   home: {
     metadata: {
-      title: 'Stories, visuals, and discoverable content',
-      description: 'Explore articles, images, listings, and curated posts through a cleaner reading-first experience.',
-      openGraphTitle: 'Stories, visuals, and discoverable content',
-      openGraphDescription: 'Discover articles, visual posts, and connected content through a calmer reading-first experience.',
-      keywords: ['story platform', 'article site', 'visual content', 'content discovery'],
+      title: 'Business profiles, opportunities, and useful stories',
+      description: 'Discover business owners, current opportunities, practical stories, and useful connections.',
+      openGraphTitle: 'Business profiles, opportunities, and useful stories',
+      openGraphDescription: 'Explore a focused collection of people, offers, businesses, and practical perspectives.',
+      keywords: ['business profiles', 'classified opportunities', 'business directory', 'business stories'],
     },
     hero: {
       badge: 'Latest stories and visuals',

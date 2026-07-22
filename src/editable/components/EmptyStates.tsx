@@ -18,13 +18,14 @@ export function EmptyState({
   className,
 }: EmptyStateProps) {
   return (
-    <section className={cn('rounded-[2rem] border border-current/10 bg-current/[0.03] p-8 text-center', className)}>
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-current/10">
+    <section className={cn('relative overflow-hidden border border-current/10 bg-current/[0.03] p-8 text-center', className)}>
+      <span className="dot-field -right-16 -top-16" />
+      <div className="mx-auto flex h-14 w-14 items-center justify-center border border-current/10 bg-current/10">
         <SearchX className="h-6 w-6" />
       </div>
-      <h2 className="mt-5 text-2xl font-semibold tracking-[-0.03em]">{title}</h2>
+      <h2 className="mt-5 text-3xl font-black uppercase leading-none tracking-[-0.05em]">{title}</h2>
       <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-current/65">{description}</p>
-      <Link href={actionHref} className="mt-6 inline-flex items-center gap-2 rounded-full border border-current/15 px-5 py-3 text-sm font-semibold transition hover:bg-current hover:text-background">
+      <Link href={actionHref} className="mt-6 inline-flex items-center gap-2 border border-current/15 px-5 py-3 font-mono text-[10px] font-bold uppercase tracking-[.12em] transition hover:border-[var(--slot4-accent)] hover:text-[var(--slot4-accent)]">
         {actionLabel}
         <ArrowRight className="h-4 w-4" />
       </Link>

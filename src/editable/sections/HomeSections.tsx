@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, Search, UserRound } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Search } from 'lucide-react'
 import type { SitePost } from '@/lib/site-connector'
 import type { HomeTimeSection } from '@/lib/task-data'
 import type { TaskKey } from '@/lib/site-config'
@@ -102,5 +102,5 @@ export function EditableTimeCollections({ primaryTask, primaryRoute, posts, time
 }
 
 export function EditableHomeCta() {
-  return <section className="relative overflow-hidden bg-[var(--slot4-accent)] py-16 text-[#17130e] sm:py-24"><span className="dot-field -right-10 top-0 !opacity-20" /><div className={`${container} relative grid items-end gap-8 lg:grid-cols-[1fr_auto]`}><div><p className="font-mono text-[10px] font-bold uppercase tracking-[.2em]">Have something useful?</p><h2 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[.86] tracking-[-.07em] sm:text-7xl">Bring your work into the conversation.</h2></div><div className="flex flex-wrap gap-3"><Link href="/create" className="inline-flex items-center gap-2 bg-[#17130e] px-6 py-4 font-mono text-[10px] font-bold uppercase text-white">Create a post <ArrowRight className="h-4 w-4" /></Link><Link href="/profile" className="inline-flex items-center gap-2 border border-[#17130e] px-6 py-4 font-mono text-[10px] font-bold uppercase"><UserRound className="h-4 w-4" />Browse profiles</Link></div></div></section>
+  return <section className="relative overflow-hidden bg-[var(--slot4-accent)] py-16 text-[#17130e] sm:py-24"><span className="dot-field -right-10 top-0 !opacity-20" /><div className={`${container} relative grid items-end gap-8 lg:grid-cols-[1fr_auto]`}><div><p className="font-mono text-[10px] font-bold uppercase tracking-[.2em]">Have something useful?</p><h2 className="mt-4 max-w-5xl text-5xl font-black uppercase leading-[.86] tracking-[-.07em] sm:text-7xl">Bring your work into the conversation.</h2></div><div className="flex flex-wrap gap-3"><Link href="/create" className="inline-flex items-center gap-2 bg-[#17130e] px-6 py-4 font-mono text-[10px] font-bold uppercase text-white">Create a post <ArrowRight className="h-4 w-4" /></Link></div></div></section>
 }

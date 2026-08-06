@@ -15,7 +15,32 @@ export async function generateEditableDetailMetadata(task: TaskKey, params: Prom
   const resolved = await params
   const slug = resolved.slug || resolved.username || ''
   const post = await fetchTaskPostBySlug(task, slug)
-  return post ? await buildPostMetadata(task, post) : await buildTaskMetadata(task)
+  if (!post) return await buildTaskMetadata(task)
+  const metadata = await buildPostMetadata(task, post)
+
+  if (task === 'profile') {
+    const content = post.content && typeof post.content === 'object' ? post.content as Record<string, unknown> : {}
+    const raw =
+      (typeof post.metaDescription === 'string' && post.metaDescription.trim()) ||
+      (typeof post.summary === 'string' && post.summary.trim()) ||
+      (typeof (content.excerpt) === 'string' && (content.excerpt as string).trim()) ||
+      (typeof (content.description) === 'string' && (content.description as string).trim()) ||
+      (typeof (content.body) === 'string' && (content.body as string).trim()) || ''
+    if (raw) {
+      const full = raw.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+      if (full) {
+        metadata.description = full
+        if (metadata.openGraph && typeof metadata.openGraph === 'object') {
+          ;(metadata.openGraph as Record<string, unknown>).description = full
+        }
+        if (metadata.twitter && typeof metadata.twitter === 'object') {
+          ;(metadata.twitter as Record<string, unknown>).description = full
+        }
+      }
+    }
+  }
+
+  return metadata
 }
 
 export async function EditableTaskDetailRoute({ task, params }: { task: TaskKey; params: Promise<{ slug?: string; username?: string }> }) {
